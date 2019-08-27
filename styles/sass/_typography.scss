@@ -1,0 +1,32 @@
+@import "variables";
+
+h1,
+h2 {
+    font-family: $titleFont;
+    color: $kenzeramaPink;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    @include forSize(belowDesktop) {
+        font-size: 2.5rem;
+    }
+}
+
+a,
+p {
+    font-family: $textFont;
+}
+
+a {
+    text-decoration: none;
+    color: $textBlack;
+    text-transform: capitalize;
+}
+
+a:hover,
+a:focus {
+    color: $kenzeramaPink;
+}

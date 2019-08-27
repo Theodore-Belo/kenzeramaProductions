@@ -1,0 +1,28 @@
+@import "variables";
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.flex {
+    display: flex;
+}
+
+.lineBreak {
+    display: block;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: $kenzeramaPink;
+}
+
+.skipLink:focus {
+  left: 20px;
+}

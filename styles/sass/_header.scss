@@ -1,0 +1,96 @@
+@import "variables";
+// LAYOUTS
+header {
+    background: url("../assets/homeBride.jpg") no-repeat;
+    background-position: 100% 100%;
+    height: 95vh;
+    flex-direction: column;
+    justify-content: center;
+    @include forSize(belowDesktop) {
+        background-position: 110% 100%;
+    }
+    @include forSize(belowTabletLandscape) {
+        background-position: 50% 100%;
+    }
+
+    h1 {
+        max-width: 50%;
+        @include forSize(belowTabletLandscape) {
+            display: none;
+        }
+    }
+
+    nav {
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .flex {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            opacity: 0;
+            margin: 5px 0;
+            @include forSize(belowTabletLandscape) {
+                opacity: 1;
+            }
+        }
+
+        ul.fullNav {
+            flex: 0 1 50%;
+            @include forSize(belowDesktop) {
+                flex: 0 1 60%;
+            }
+            @include forSize(belowTabletLandscape) {
+                display: none;
+            }
+        }
+    }
+}
+
+// NAV MENU ITEMS
+header {
+    li {
+        transition: 0.5s;
+        display: block;
+        position: relative;
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
+
+    ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.5s ease;
+        left: -10px;
+        background: rgba(255,255,255,0.5);
+        border-radius: 5px;
+    }
+
+    ul li:hover > ul,
+    ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    ul li ul li {
+        clear: both;
+        width: 100%;
+        padding: 10px 20px 0 10px;
+    }
+
+    ul li ul li:last-of-type {
+        padding-bottom: 10px;
+    }
+}
+
+
+
