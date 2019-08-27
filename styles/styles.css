@@ -610,13 +610,37 @@ header.aboutPage h2 {
 }
 
 main.about {
-  background: rgba(255, 255, 255, 0);
-  position: relative;
-  top: -80vh;
   width: 60%;
 }
 
+@media (max-width: 1200px) {
+  main.about {
+    width: 70%;
+  }
+}
+
+@media (max-width: 960px) {
+  main.about {
+    width: 100%;
+  }
+}
+
+main.about img.bubbleBride {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: -1;
+}
+
+@media (max-width: 960px) {
+  main.about img.bubbleBride {
+    margin: 0 auto;
+    right: initial;
+  }
+}
+
 main.about h3 {
+  margin-top: 150px;
   margin-bottom: 50px;
 }
 
@@ -636,4 +660,33 @@ main.about .flex {
 
 main.about .imageContainer {
   width: 60%;
+}
+
+main.about .button {
+  margin-top: 25px;
+}
+
+.aboutText {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1200px) {
+  .aboutText {
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 5px 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (max-width: 960px) {
+  .aboutText {
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
