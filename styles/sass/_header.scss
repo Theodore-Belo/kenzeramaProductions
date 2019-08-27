@@ -1,9 +1,9 @@
 @import "variables";
 // LAYOUTS
 header {
-    background: url("../assets/homeBride.jpg") no-repeat;
+    background: url("../assets/homeBride.jpg") no-repeat fixed;
     background-position: 100% 100%;
-    height: 95vh;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     @include forSize(belowDesktop) {
@@ -21,11 +21,12 @@ header {
     }
 
     nav {
-        background: white;
+        background: rgba(255,255,255, 1);
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        z-index: 10;
 
         .flex {
             justify-content: space-between;
@@ -70,7 +71,7 @@ header {
         position: absolute;
         transition: all 0.5s ease;
         left: -10px;
-        background: rgba(255,255,255,0.5);
+        background: rgba(255,255,255,0.8);
         border-radius: 5px;
     }
 

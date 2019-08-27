@@ -11,7 +11,7 @@ $textBlack: #131515;
   } @else if $size == belowTabletPortrait {
     @media (max-width: 768px) { @content; }
   } @else if $size == belowTabletLandscape {
-    @media (max-width: 900px) { @content; }
+    @media (max-width: 960px) { @content; }
   } @else if $size == belowDesktop {
     @media (max-width: 1200px) { @content; }
   } @else if $size == bigDesktopUp {

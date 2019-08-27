@@ -193,7 +193,8 @@ ul {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Questrial", sans-serif;
   color: #ff7ac0;
   text-transform: uppercase;
@@ -210,9 +211,18 @@ h1 {
   }
 }
 
+h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
 a,
 p {
   font-family: "Alegreya", serif;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -224,6 +234,23 @@ a {
 a:hover,
 a:focus {
   color: #ff7ac0;
+}
+
+.button {
+  background: #ff7ac0;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+}
+
+.button:hover,
+.button:visited:hover {
+  color: #131515;
+}
+
+.button:visited {
+  color: white;
 }
 
 .wrapper {
@@ -256,9 +283,9 @@ a:focus {
 }
 
 header {
-  background: url("../assets/homeBride.jpg") no-repeat;
+  background: url("../assets/homeBride.jpg") no-repeat fixed;
   background-position: 100% 100%;
-  height: 95vh;
+  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -274,7 +301,7 @@ header {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   header {
     background-position: 50% 100%;
   }
@@ -284,7 +311,7 @@ header h1 {
   max-width: 50%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   header h1 {
     display: none;
   }
@@ -296,6 +323,7 @@ header nav {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 
 header nav .flex {
@@ -312,7 +340,7 @@ header nav h2 {
   margin: 5px 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   header nav h2 {
     opacity: 1;
   }
@@ -332,7 +360,7 @@ header nav ul.fullNav {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   header nav ul.fullNav {
     display: none;
   }
@@ -356,7 +384,7 @@ header ul li ul {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   left: -10px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
 }
 
@@ -389,7 +417,7 @@ header ul li ul li:last-of-type {
        user-select: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .menuToggle {
     display: block;
   }
@@ -476,12 +504,12 @@ header ul li ul li:last-of-type {
 .menu {
   position: absolute;
   width: 400px;
-  height: 100vh;
+  height: 110vh;
   margin: -100px 0 0 0;
   padding: 50px;
   padding-top: 125px;
   right: -100px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -507,4 +535,105 @@ header ul li ul li:last-of-type {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
   opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.about .imageContainer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+@media (max-width: 1200px) {
+  .about .imageContainer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 60%;
+            flex: 0 1 60%;
+  }
+}
+
+.about .aboutText {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 25px;
+}
+
+@media (max-width: 1200px) {
+  .about .aboutText {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 40%;
+            flex: 0 1 40%;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 960px) {
+  .about .aboutText {
+    position: initial;
+  }
+}
+
+.about p {
+  padding: 35px;
+}
+
+header.aboutPage {
+  height: auto;
+}
+
+header.aboutPage h2 {
+  opacity: 1;
+}
+
+main.about {
+  background: rgba(255, 255, 255, 0);
+  position: relative;
+  top: -80vh;
+  width: 60%;
+}
+
+main.about h3 {
+  margin-bottom: 50px;
+}
+
+main.about p {
+  padding: 15px 35px;
+}
+
+main.about .flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.about .imageContainer {
+  width: 60%;
 }
