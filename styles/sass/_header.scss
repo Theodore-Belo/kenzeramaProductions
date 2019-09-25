@@ -7,14 +7,16 @@ header {
     flex-direction: column;
     justify-content: center;
     @include forSize(belowDesktop) {
-        background-position: 110% 100%;
+        background-position: 110% 100%;  
     }
     @include forSize(belowTabletLandscape) {
-        background-position: 50% 100%;
+        background-position: 50% 50%;
+        background-size: 80%;
     }
 
     h1 {
         max-width: 50%;
+        margin-bottom: 0;
         @include forSize(belowTabletLandscape) {
             display: none;
         }
@@ -27,6 +29,7 @@ header {
         left: 0;
         right: 0;
         z-index: 10;
+        border-bottom: 2px $kenzeramaPink solid;
 
         .flex {
             justify-content: space-between;
@@ -35,10 +38,29 @@ header {
 
         h2 {
             opacity: 0;
-            margin: 5px 0;
+            margin: 20px;
+            margin-bottom: 0px;
             @include forSize(belowTabletLandscape) {
                 opacity: 1;
             }
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: grey;
+            font-family: 'Sacramento', cursive;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            opacity: 0;
+            margin-bottom: 10px;
+            @include forSize(belowTabletLandscape) {
+                opacity: 1;
+            }
+        }
+
+        .topTitle {
+            justify-content: center;
+            flex-basis: 100%;
         }
 
         ul.fullNav {
@@ -59,7 +81,9 @@ header {
         transition: 0.5s;
         display: block;
         position: relative;
+        padding-left: 20px;
     }
+
 
     li:hover {
         cursor: pointer;
@@ -93,5 +117,17 @@ header {
     }
 }
 
+.title {
 
+    h3 {
+        max-width: 50%;
+        text-align: center;
+        color: grey;
+        font-family: 'Sacramento', cursive;
+        text-transform: capitalize;
+        @include forSize(belowTabletLandscape) {
+            display: none;
+        }
+    }
+}
 

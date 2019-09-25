@@ -1,0 +1,83 @@
+header.contact {
+    height: auto;
+
+    h2 {
+        opacity: 1;
+    }
+
+    h3 {
+        opacity: 1;
+    }
+}
+
+.contactMain {
+    margin-top: 125px;
+    padding-bottom: 50px;
+
+    h3 {
+        font-family: 'Great Vibes', cursive;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+        font-size: 2.5rem;
+    }
+}
+
+.formSection {
+    justify-content: space-between;
+    @include forSize(belowTabletLandscape) {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contactForm {
+    width: 45%;
+    border: 1px solid black;
+    padding: 20px 20px 30px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px rgba(51,65,57,0.1);
+    @include forSize(belowTabletLandscape) {
+        width: 85%;
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+
+    .button {
+        width: 30%;
+        align-self: center;
+        font-size: 1rem;
+        @include forSize(belowPhone) {
+            width: 50%;
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    input,
+    textarea {
+        width: 95%;
+    }
+}
+
+.card {
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+    p:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    @include forSize(belowTabletLandscape) {
+        width: 85%;
+    }
+}

@@ -1,5 +1,9 @@
 @import "variables";
 
+body {
+  position: relative;
+}
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,4 +29,26 @@
 
 .skipLink:focus {
   left: 20px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.up {
+  position: relative;
+  top: -20px;
+}
+
+.down {
+  position: relative;
+  bottom: -20px;
+}
+
+fieldset {
+  border: none;
+}
+
+.indent {
+  margin-left: 20px;
 }

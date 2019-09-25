@@ -28,12 +28,20 @@ p {
 
 p {
     margin: 0;
+    color: $textBlack;
 }
 
 a {
     text-decoration: none;
     color: $textBlack;
     text-transform: capitalize;
+    transition: 0.3s;
+    &.pink {
+        color: $kenzeramaPink;
+    }
+    &.black {
+        
+    }
 }
 
 a:hover,
@@ -56,4 +64,15 @@ a:focus {
 
 .button:visited {
     color: white;
+}
+
+.signature p {
+    font-family: 'Pinyon Script';
+    font-size: 2rem;
+    margin-right: 50px;
+    color: $kenzeramaPink;
+}
+
+.pink {
+    color: $kenzeramaPink;
 }

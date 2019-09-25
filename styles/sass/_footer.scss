@@ -1,0 +1,22 @@
+@import 'variables';
+
+footer {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+.socialMedia {
+    width: 150px;
+    justify-content: space-between;
+}
+
+i {
+    color: $kenzeramaPink;
+    font-size: 2rem;
+}
